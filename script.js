@@ -4,10 +4,12 @@ let ministers_dict;
 let ministers;
 let minister_idx = 0;
 let party_leaders_idx = 0;
+let mode = "ministers";
 
 function init() {
-    function init_question(minister){
-        const minister_txt = $(".minister");
+    const question_txt = $("#question");
+
+    function init_question(name, names, dict){
         const img = $(".card-img-top");
         const txt = $(".card-title");
         img.removeClass("deblur-image-anim");
@@ -15,20 +17,19 @@ function init() {
         img.addClass("blurry-image");
         txt.addClass("blurry-text");
 
-        minister_txt.html(minister);
-        txt.html(ministers_dict[minister].name);
-        img.attr("src", "./photos/"+ministers_dict[minister].photo);
+        txt.html(dict[name].name);
+        img.attr("src", "./photos/"+dict[name].photo);
 
         img.replaceWith(img[0].outerHTML);
 
         // generate answer keys
         let answer_keys = [];
-        const correct_name = ministers_dict[minister].name;
+        const correct_name = dict[name].name;
         answer_keys.push(correct_name);
         while (answer_keys.length < 5){
-            let wrong_answer_idx = parseInt(ministers.length * Math.random());
-            let wrong_answer_minister = ministers[wrong_answer_idx];
-            let wrong_name = ministers_dict[wrong_answer_minister].name;
+            let wrong_answer_idx = parseInt(names.length * Math.random());
+            let wrong_answer_minister = names[wrong_answer_idx];
+            let wrong_name = dict[wrong_answer_minister].name;
             if (!answer_keys.includes(wrong_name)){
                 answer_keys.push(wrong_name);
             }
@@ -53,16 +54,39 @@ function init() {
     });
 
     $("#next-btn").on("click", function (){
-        minister_idx += 1;
-        if (minister_idx >= ministers.length){
-            minister_idx = 0;
+        let temp_mode = mode;
+        if (temp_mode === "both"){
+            temp_mode = Math.random() < 0.5 ? "ministers" : "leaders";
         }
-        init_question(ministers[minister_idx]);
+        if (temp_mode === "ministers") {
+            minister_idx += 1;
+            if (minister_idx >= ministers.length) {
+                minister_idx = 0;
+                ministers = ministers.sort((a, b) => 0.5 - Math.random());  // shuffle
+            }
+            const minister = ministers[minister_idx]
+            question_txt.html(`Hvem er Danmarks <i>${minister}</i>?`);
+            init_question(minister, ministers, ministers_dict);
+        } else if (temp_mode === "leaders"){
+            party_leaders_idx += 1;
+            if (party_leaders_idx >= party_leaders.length) {
+                party_leaders_idx = 0;
+                party_leaders = party_leaders.sort((a, b) => 0.5 - Math.random());  // shuffle
+            }
+            const leader = party_leaders[party_leaders_idx];
+            question_txt.html(`Hvem er leder af <i>${leader}</i>?`);
+            init_question(leader, party_leaders, party_leaders_dict);
+        }
+    });
+
+    $(".question-options").on("change", function(){
+        mode = $(".question-options:checked").data("option");
     })
 
     ministers = Object.keys(ministers_dict).sort((a, b) => 0.5 - Math.random());
     party_leaders = Object.keys(party_leaders_dict).sort((a, b) => 0.5 - Math.random());
-    init_question(ministers[0]);
+    question_txt.html(`Hvem er Danmarks <i>${ministers[0]}</i>?`);
+    init_question(ministers[0], ministers, ministers_dict);
 }
 
 fetch('./data.json')
