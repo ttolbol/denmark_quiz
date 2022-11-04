@@ -1,0 +1,38 @@
+{
+  "Socialdemokratiet": {
+    "name": "Mette Frederiksen",
+    "photo": "mette_frederiksen.jpg"
+  },
+  "Venstre": {
+    "name": "Jakob Ellemann-Jensen",
+    "photo": "jakob_ellemann-jensen.jpg"
+  },
+  "Socialistisk Folkeparti": {
+    "name": "Pia Olsen Dyhr",
+    "photo": "pia_olsen_dyhr.jpg"
+  },
+  "Det Konservative Folkeparti": {
+    "name": "S\u00f8ren Pape Poulsen",
+    "photo": "s\u00f8ren_pape_poulsen.jpg"
+  },
+  "Dansk Folkeparti": {
+    "name": "Morten Messerschmidt",
+    "photo": "morten_messerschmidt.jpg"
+  },
+  "Nye Borgerlige": {
+    "name": "Pernille Vermund",
+    "photo": "pernille_vermund.jpg"
+  },
+  "Liberal Alliance": {
+    "name": "Alex Vanopslagh",
+    "photo": "alex_vanopslagh.jpg"
+  },
+  "Frie Gr\u00f8nne": {
+    "name": "Sikandar Siddique",
+    "photo": "sikandar_siddique.jpg"
+  },
+  "Moderaterne": {
+    "name": "Lars L\u00f8kke Rasmussen",
+    "photo": "lars_l\u00f8kke_rasmussen.jpg"
+  }
+}
