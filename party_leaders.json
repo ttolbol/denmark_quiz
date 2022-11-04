@@ -34,5 +34,17 @@
   "Moderaterne": {
     "name": "Lars L\u00f8kke Rasmussen",
     "photo": "lars_l\u00f8kke_rasmussen.jpg"
+  },
+  "Radikale Venstre": {
+    "name": "Mikkel Irminger Sarbo",
+    "photo": "mikkel_irminger_sarbo.png"
+  },
+  "Danmarksdemokraterne": {
+    "name": "Inger Støjberg",
+    "photo": "inger_stojberg.jpg"
+  },
+  "Alternativet": {
+    "name": "Franciska Rosenkilde",
+    "photo": "franciska_rosenkilde.jpg"
   }
 }
