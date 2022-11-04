@@ -1,6 +1,9 @@
+let party_leaders_dict;
+let party_leaders;
 let ministers_dict;
 let ministers;
 let minister_idx = 0;
+let party_leaders_idx = 0;
 
 function init() {
     function init_question(minister){
@@ -58,9 +61,10 @@ function init() {
     })
 
     ministers = Object.keys(ministers_dict).sort((a, b) => 0.5 - Math.random());
+    party_leaders = Object.keys(party_leaders_dict).sort((a, b) => 0.5 - Math.random());
     init_question(ministers[0]);
 }
 
-fetch('./ministers.json')
+fetch('./data.json')
     .then((response) => response.json())
-    .then((json) => {ministers_dict = json; init();});
+    .then((data) => {ministers_dict = data['ministers']; party_leaders_dict = data['parties']; init();});
