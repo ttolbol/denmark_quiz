@@ -1,0 +1,82 @@
+{
+  "Statsminister": {
+    "name": "Mette Frederiksen",
+    "photo": "mette_frederiksen.jpg"
+  },
+  "Finansminister": {
+    "name": "Nicolai Wammen",
+    "photo": "nicolai_wammen.jpg"
+  },
+  "Udenrigsminister": {
+    "name": "Jeppe Kofod",
+    "photo": "jeppe_kofod.jpg"
+  },
+  "Forsvarsminister": {
+    "name": "Morten B\u00f8dskov",
+    "photo": "morten_b\u00f8dskov.jpg"
+  },
+  "Justitsminister": {
+    "name": "Mattias Tesfaye",
+    "photo": "mattias_tesfaye.jpg"
+  },
+  "Social- og \u00e6ldreminister": {
+    "name": "Astrid Krag",
+    "photo": "astrid_krag.jpg"
+  },
+  "Klima-, energi- og forsyningsminister": {
+    "name": "Dan J\u00f8rgensen",
+    "photo": "dan_j\u00f8rgensen.jpg"
+  },
+  "Sundhedsminister": {
+    "name": "Magnus Heunicke",
+    "photo": "magnus_heunicke.jpg"
+  },
+  "Minister for f\u00f8devarer, landbrug og fiskeri": {
+    "name": "Rasmus Prehn",
+    "photo": "rasmus_prehn.jpg"
+  },
+  "B\u00f8rne- og undervisningsminister": {
+    "name": "Pernille Rosenkrantz-Theil",
+    "photo": "pernille_rosenkrantz-theil.jpg"
+  },
+  "Transportminister og minister for ligestilling": {
+    "name": "Trine Bramsen",
+    "photo": "trine_bramsen.jpg"
+  },
+  "Kulturminister og kirkeminister": {
+    "name": "Ane Halsboe-J\u00f8rgensen",
+    "photo": "ane_halsboe-j\u00f8rgensen.jpg"
+  },
+  "Erhvervsminister": {
+    "name": "Simon Kollerup",
+    "photo": "simon_kollerup.jpg"
+  },
+  "Besk\u00e6ftigelsesminister": {
+    "name": "Peter Hummelgaard",
+    "photo": "peter_hummelgaard.jpg"
+  },
+  "Udl\u00e6ndinge- og integrationsminister": {
+    "name": "Kaare Dybvad Bek",
+    "photo": "kaare_dybvad_bek.jpg"
+  },
+  "Milj\u00f8minister": {
+    "name": "Lea Wermelin",
+    "photo": "lea_wermelin.jpg"
+  },
+  "Minister for udviklingssamarbejde og minister for nordisk samarbejde": {
+    "name": "Flemming M\u00f8ller Mortensen",
+    "photo": "flemming_m\u00f8ller_mortensen.jpg"
+  },
+  "Uddannelses- og forskningsminister": {
+    "name": "Jesper Petersen",
+    "photo": "jesper_petersen.jpg"
+  },
+  "Skatteminister": {
+    "name": "Jeppe Bruus",
+    "photo": "jeppe_bruus.jpg"
+  },
+  "Indenrigs- og boligminister": {
+    "name": "Christian Rabjerg Madsen",
+    "photo": "christian_rabjerg_madsen.jpg"
+  }
+}

@@ -1,0 +1,36 @@
+@-webkit-keyframes image_deblur {
+    0% {opacity: 0.0; filter: blur(30px); -webkit-filter: blur(30px); grayscale(100%)}
+    100% {opacity: 1.0; filter: blur(0px); -webkit-filter: blur(0px); grayscale(0%)}
+}
+
+@-webkit-keyframes text_deblur {
+    0% {color: transparent; text-shadow: 0 0 20px rgba(0,0,0,1.0); opacity: 0.0;}
+    99% {color: transparent; text-shadow: 0 0 1px rgba(0,0,0,1.0); opacity: 1.0;}
+    100% {color: #000; text-shadow: none; opacity: 1.0;}
+}
+
+.blurry-text {
+    color: transparent;
+    text-shadow: 0 0 20px rgba(0,0,0,1.0);
+    opacity: 0.0;
+}
+
+.blurry-image {
+    filter: blur(30px) grayscale(100%);
+    -webkit-filter: blur(30px) grayscale(100%);
+    opacity: 0.0;
+}
+
+.deblur-image-anim {
+    animation: image_deblur 1s;
+}
+
+.deblur-text-anim {
+    animation: text_deblur 1s;
+}
+
+.card {
+    background-image: url("./default_avatar.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
